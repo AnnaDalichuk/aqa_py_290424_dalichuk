@@ -13,7 +13,6 @@ def multiplication_table(number):
         str_to_print += str(number) + "x" + str(multiplier) + "=" + str(result)+ "\n"
         multiplier += 1
     return str_to_print
-
 print(multiplication_table(3))
 
 # Should print:
