@@ -4,16 +4,19 @@
 Код майже готовий, треба знайти помилки та випраавити\доповнити.
 """
 def multiplication_table(number):
+    results_as_dict = {}
     multiplier = 1
-    str_to_print = ""
     while multiplier <= 10:
         result = number * multiplier
         if result > 25:
             break
-        str_to_print += str(number) + "x" + str(multiplier) + "=" + str(result)+ "\n"
+        results_as_dict[multiplier] = result
         multiplier += 1
-    return str_to_print
-print(multiplication_table(3))
+    return results_as_dict
+
+table = multiplication_table(3)
+for multiplier, result in table.items():
+    print(f"{multiplier} x {result // multiplier} = {result}")
 
 # Should print:
 # 3x1=3
@@ -34,7 +37,7 @@ def summ_function(number1, number2):
 print(f"The summ equals {summ_function(3, 4)}.")
 #OR
 def summ_function2(number1, number2):
-    return print(f"The summ of {number1} and {number2} equals {number1+number2}.")
+    print(f"The summ of {number1} and {number2} equals {number1+number2}.")
 summ_function2(4,5)
 
 
